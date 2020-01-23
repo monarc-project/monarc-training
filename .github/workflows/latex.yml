@@ -6,8 +6,17 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v1
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
           working_directory: presentation
           root_file: MONARC-training.tex
+
+      - run: mkdir -p artifact
+      - run: mv MONARC-training.pdf artifact/
+
+      - uses: actions/upload-artifact@v1
+        with:
+          name: MONARC-training.pdf
+          path: artifact
