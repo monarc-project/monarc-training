@@ -1,0 +1,15 @@
+*.nav
+*.snm
+*.bbl
+*.blg
+*.toc
+*.pdf
+*.log
+*.aux
+*.out
+*.*~
+*.backup
+*.vrb
+
+# Temporary files (vim backups)
+*.swp
