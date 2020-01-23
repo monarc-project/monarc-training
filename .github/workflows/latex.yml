@@ -14,7 +14,7 @@ jobs:
           root_file: MONARC-training.tex
 
       - run: mkdir -p artifact
-      - run: mv MONARC-training.pdf artifact/
+      - run: mv presentation/MONARC-training.pdf artifact/
 
       - uses: actions/upload-artifact@v1
         with:
