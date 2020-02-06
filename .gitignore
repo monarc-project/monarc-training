@@ -10,6 +10,7 @@
 *.*~
 *.backup
 *.vrb
+*.synctex.gz
 
 # Temporary files (vim backups)
 *.swp
