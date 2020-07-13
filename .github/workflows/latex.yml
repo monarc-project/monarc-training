@@ -10,13 +10,22 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
-          working_directory: presentation
-          root_file: MONARC-training.tex
+          working_directory: 20200212
+          root_file: 20200212_MONARC-training.tex
+          
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@master
+        with:
+          working_directory: 20200722
+          root_file: 20200722_MONARC-training.tex
 
       - run: mkdir -p artifact
-      - run: mv presentation/MONARC-training.pdf artifact/
+      - run: mv 20200212/20200212_MONARC-training.pdf artifact/
+      
+      - run: mkdir -p artifact
+      - run: mv 20200722/20200722_MONARC-training.pdf artifact/
 
       - uses: actions/upload-artifact@v1
         with:
-          name: MONARC-training.pdf
+          name: MONARC-trainings.pdf
           path: artifact
