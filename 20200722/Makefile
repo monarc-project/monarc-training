@@ -6,7 +6,7 @@ pdf:
 	pdflatex -interaction=nonstopmode *.tex
 
 clean:
-	rm *.toc *.log *.snm *.aux *.nav *.out *.vrb
+	rm *.toc *.log *.snm *.aux *.nav *.out *.vrb || true
 
 clean-all: clean
 	rm *.pdf
