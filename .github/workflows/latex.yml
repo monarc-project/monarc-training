@@ -13,7 +13,6 @@ jobs:
           working_directory: 20200212
           root_file: 20200212_MONARC-training.tex
 
-
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
@@ -29,7 +28,7 @@ jobs:
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
-          working_directory: 20201203
+          working_directory: 20210929
           root_file: 20210929_MONARC-training.tex
 
 
