@@ -12,7 +12,8 @@ jobs:
         with:
           working_directory: 20200212
           root_file: 20200212_MONARC-training.tex
-          
+
+
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@master
         with:
@@ -24,6 +25,13 @@ jobs:
         with:
           working_directory: 20201203
           root_file: 20201203_MONARC-training.tex
+          
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@master
+        with:
+          working_directory: 20201203
+          root_file: 20210929_MONARC-training.tex
+
 
       - run: mkdir -p artifact
       - run: mv 20200212/20200212_MONARC-training.pdf artifact/
@@ -33,6 +41,10 @@ jobs:
       
       - run: mkdir -p artifact
       - run: mv 20201203/20201203_MONARC-training.pdf artifact/
+      
+      - run: mkdir -p artifact
+      - run: mv 20210929/20210929_MONARC-training.pdf artifact/
+
 
       - uses: actions/upload-artifact@v1
         with:
