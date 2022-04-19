@@ -2,13 +2,14 @@
 
 [![Workflow](https://github.com/monarc-project/monarc-training/workflows/Build%20LaTeX%20document/badge.svg?style=flat-square)](https://github.com/monarc-project/monarc-training/actions?query=workflow%3A%22Build%20LaTeX%20document%22)
 
-LaTeX source code of the MONARC training (in English language).
+LaTeX source code of the [MONARC](https://www.monarc.lu)
+training (in English language).
 
 ```bash
 $ git clone https://github.com/monarc-project/monarc-training
-$ cd monarc-training/presentation/
-$ pdflatex MONARC-training.tex
-$ xdg-open MONARC-training.pdf
+$ cd monarc-training/20220419/
+$ pdflatex 20220419_MONARC-training.tex
+$ xdg-open 20220419_MONARC-training.pdf
 ```
 
 Or you can get the artifact associated to the last GitHub Actions build.
