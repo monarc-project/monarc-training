@@ -1,0 +1,143 @@
+\documentclass[]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{listings}
+\lstset{
+basicstyle=\fontsize{10}{12}\selectfont\ttfamily,
+keywordstyle=\color{blue},
+breaklines=true,
+showtabs=false,
+showstringspaces=false,
+numberstyle=\tiny\color{mygray}
+}
+% \usepackage[french]{babel}
+% \uselanguage{French}
+% \languagepath{French}
+\usepackage{pslatex}        % for better PDF on screen
+%\usepackage{textcomp}
+
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Dresden}
+%\usetheme{Frankfurt}
+%\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{JuanLesPins}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+
+
+% Set Color ==============================
+% Custom colors tested with CambridgeUS.
+% If you want a nice looking presentation,
+% simply comment this section.
+\usepackage{xcolor}
+
+% http://www.computerhope.com/htmcolor.htm
+\definecolor{gold}{HTML}{FDD017}
+\definecolor{deep sky blue}{HTML}{3BB9FF}
+\definecolor{light sky blue}{HTML}{82CAFA}
+\definecolor{casesBlue}{HTML}{0072b8}
+
+\makeatletter
+\definecolor{mybackground}{HTML}{82CAFA}
+\definecolor{myforeground}{HTML}{0000A0}
+
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{alerted text}{fg=red}
+\setbeamercolor{example text}{fg=black}
+
+\setbeamercolor{background canvas}{fg=myforeground, bg=white}
+\setbeamercolor{background}{fg=myforeground, bg=mybackground}
+
+\setbeamercolor{palette primary}{fg=black, bg=gold}
+%       \setbeamercolor{palette secondary}{fg=black, bg=gray!20!white}
+\setbeamercolor{palette secondary}{fg=white, bg=casesBlue!80!gold}
+\setbeamercolor{palette tertiary}{fg=white, bg=casesBlue}
+%       \makeatother
+
+% Set Color ==============================
+
+
+\hypersetup{
+pdfkeywords = {MONARC, NC3, training, security},
+% pdfpagemode = FullScreen
+}
+
+% Navigation menu
+% disable options by commenting appropriate line
+\setbeamertemplate{navigation symbols}{%
+\insertslidenavigationsymbol
+\insertframenavigationsymbol
+\insertsubsectionnavigationsymbol
+\insertsectionnavigationsymbol
+\insertdocnavigationsymbol
+\insertbackfindforwardnavigationsymbol
+}
+
+
+% contenu de la page de titre
+\title[Introduction to MONARC]{Introduction to MONARC}
+\subtitle{Optimised Risk Analysis Method}
+\author[NC3]{Luxembourg House of Cybersecurity / NC3}
+\institute[]{\href{https://www.nc3.lu}{National Cybersecurity Competence Center of Luxembourg}}
+\date{December 7, 2022}
+% \date{\today{}}
+\logo{\includegraphics[height=0.5cm]{../common_pictures/logo_lhc.png}}
+\newsavebox{\logoA}
+\newsavebox{\logoB}
+\savebox{\logoA}{\includegraphics[width=3.0cm]{../common_pictures/logo_lhc.png}}
+\savebox{\logoB}{\includegraphics[width=3.0cm]{../common_pictures/logo-monarc-2.png}}
+\titlegraphic{%
+\raisebox{.5\dimexpr\ht\logoB-\ht\logoA}{\usebox{\logoA}}% raise smaller logo into position
+\hspace*{5cm}%
+\usebox{\logoB}
+}
+% End of preamble
+
+
+\begin{document}
+\begin{frame}
+  \titlepage
+\end{frame}
+
+
+% Content
+\include{1-introduction/introduction}
+\include{2-method/method}
+\include{3-tool/tool}
+% \include{3.1-modules/modules}
+% \include{4-roadmap/roadmap}
+\include{5-services/services}
+
+
+%
+% SECTION: End of the presentation
+%
+\section*{End of the presentation}
+\begin{frame}
+  \frametitle{End of the presentation}
+  \framesubtitle{}
+  \begin{center}
+    \begin{itemize}
+      \item Thank you for listening.
+      \item Contact: opensource@nc3.lu
+      \item \url{https://github.com/NC3-LU}
+      \item \url{https://github.com/monarc-project}
+      \item \url{https://www.monarc.lu}
+    \end{itemize}
+  \end{center}
+\end{frame}
+\end{document}
