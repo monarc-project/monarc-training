@@ -55,6 +55,12 @@ jobs:
           working_directory: 20221207
           root_file: 20221207_MONARC-training.tex
 
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@master
+        with:
+          working_directory: 20230531
+          root_file: 20230531_MONARC-training.tex
+
       - run: mkdir -p artifact
       - run: mv 20200212/20200212_MONARC-training.pdf artifact/
 
@@ -78,6 +84,9 @@ jobs:
 
       - run: mkdir -p artifact
       - run: mv 20221207/20221207_MONARC-training.pdf artifact/
+
+      - run: mkdir -p artifact
+      - run: mv 20230531/20230531_MONARC-training.pdf artifact/
 
       - uses: actions/upload-artifact@v1
         with:
