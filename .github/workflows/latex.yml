@@ -96,6 +96,9 @@ jobs:
 
       - run: mkdir -p artifact
       - run: mv 20231206/20231206_MONARC-training.pdf artifact/
+      
+      - run: mkdir -p artifact
+      - run: mv 20240918/20240918_MONARC-training.pdf artifact/
 
       - uses: actions/upload-artifact@v4
         with:
